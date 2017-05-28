@@ -1,10 +1,6 @@
 #include <tins/tins.h>
 #include <iostream>
-#include <unordered_set>
 #include <unordered_map>
-#include <stdint.h>
-#include <boost/functional/hash.hpp>
-
 #include "Flow.h"
 
 using namespace std;
