@@ -19,7 +19,6 @@ int main(int c, char **v) {
         IP *ip = packet.pdu()->find_pdu<IP>();
         if (ip) {
             Flow flow;
-            UDP *udp = packet.pdu()->find_pdu<UDP>();
             if (packet.pdu()->find_pdu<TCP>()) {
                 TCP &tcp = packet.pdu()->rfind_pdu<TCP>();
                 flow = Flow(ip->src_addr(), ip->dst_addr(), tcp.sport(),
